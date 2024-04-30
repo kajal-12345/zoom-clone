@@ -6,14 +6,14 @@ const Home = () => {
   const now = new Date();
   const months = ["January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Friday", "Saturday"];
-  // const hour =  now.getHours()-12;
-  // const minute = now.getMinutes();
-  // const formathour = hour.toString().length > 1 ? `${hour}` :`0${hour}`;
-  // const formatMin =  minute.toString().length > 1 ? `${minute}` : `0${minute}`;
-  // const formatTime = formathour + ":" +formatMin;
+  const hour =  now.getHours()-12;
+  const minute = now.getMinutes();
+  const formathour = hour.toString().length > 1 ? `${hour}` :`0${hour}`;
+  const formatMin =  minute.toString().length > 1 ? `${minute}` : `0${minute}`;
+  const formatTime = formathour + ":" +formatMin;
 
   // const formatdate = new Intl.DateTimeFormat('en-IN',{dateStyle:'full'}).format(now);
-  const time = now.toLocaleTimeString("en-Us", { hour: '2-digit', minute: '2-digit' })
+  // const time = now.toLocaleTimeString("en-Us", { hour: '2-digit', minute: '2-digit' })
   const date = days.at(now.getDay()) + ", " + now.getDate() + "  " + months.at(now.getMonth()) + "  " + now.getFullYear()
   return (
     <section className='text-large flex text-white  flex-col gap-10 size-full'>
