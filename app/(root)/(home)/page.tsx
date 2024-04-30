@@ -13,7 +13,7 @@ const Home = () => {
   // const formatTime = formathour + ":" +formatMin;
 
   // const formatdate = new Intl.DateTimeFormat('en-IN',{dateStyle:'full'}).format(now);
-  const time = now.toLocaleTimeString("en-IN", { hour: '2-digit', minute: '2-digit' })
+  const time = now.toLocaleTimeString("en-Us", { hour: '2-digit', minute: '2-digit' })
   const date = days.at(now.getDay()) + ", " + now.getDate() + "  " + months.at(now.getMonth()) + "  " + now.getFullYear()
   return (
     <section className='text-large flex text-white  flex-col gap-10 size-full'>
