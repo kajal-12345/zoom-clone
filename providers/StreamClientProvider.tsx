@@ -29,7 +29,10 @@ export const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
         })
         setVideoClient(client)
     }, [isLoaded, user])
-    if (!videoClient) return <Loader />
+    if (!videoClient) {
+        // console.log("first");
+        return;
+    }
     return (
         <StreamVideo client={videoClient}>
             {children}

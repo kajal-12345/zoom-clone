@@ -11,8 +11,8 @@ type HomeProps = {
 }
 const HomeCard = ({ img, title, description, className, handleClick }: HomeProps) => {
     return (
-        <div className={`${className} px-5 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px]`} onClick={handleClick}>
-            <div className='rounded-[10px] flex-center  cursor-pointer glassmorphism size-12'>
+        <div className={`${className} cursor-pointer px-5 py-6 flex flex-col  justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px]`} onClick={handleClick}>
+            <div className='rounded-[10px] flex-center glassmorphism size-12'>
                 <Image src={img} alt={title} width={27} height={27} />
             </div>
             <div className='flex flex-col gap-2'>
